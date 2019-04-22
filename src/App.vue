@@ -19,11 +19,17 @@ export default {
 </script>
 
 <style lang="scss">
+
+@font-face {
+  font-family: athelas;
+  src: url("./assets/fonts/Athelas-Regular.ttf");
+}
+
 #app {
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: athelas;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
