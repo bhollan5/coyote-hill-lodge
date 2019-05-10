@@ -10,7 +10,7 @@
     <div id="forest-image-shadow"></div>
     <img src="@/assets/misc_images/forest-hills.png"
     :style="{
-      'margin-bottom': 0 + 'px'
+      'margin-top':( scrollPos / 10) - 150 + 'px'
     }">
   </div>
 </div>
