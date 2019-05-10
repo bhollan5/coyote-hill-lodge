@@ -49,5 +49,25 @@ export default {
 .full-page {
   width: 100vw;
   height: 100vh;
+  &.top-padding {
+    padding-top: 150px;
+    height: calc(100vh - 150px);
+  }
+}
+
+.dark-button {
+  background: rgba(0,0,0,.4);
+  border:  solid 1px white;
+  border-radius: 5px;
+  padding: 15px 50px;
+  color: white;
+  font-family: athelas;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: .2s;
+}
+.dark-button:hover {
+  background: rgba(0,0,0,.6);
+  box-shadow: 0px 0px 10px rgba(255,255,255,.5);
 }
 </style>

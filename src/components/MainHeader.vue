@@ -29,13 +29,18 @@
   align-items: center;
   div {
     cursor: pointer;
+    min-width: 170px;
     transition-duration: .5s;
+    flex-basis: 0;
+
   }
   div:hover {
     margin-top: -10px;
   }
   img {
     width: 30vw;
+      flex-basis: 0;
+
   }
 }
 </style>

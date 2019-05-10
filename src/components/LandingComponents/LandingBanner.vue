@@ -1,6 +1,9 @@
 <template>
 <div class="full-page" id="landing-banner">
-  <h1>Welcome to your home away from home.</h1>
+  <div>
+    <h1>Welcome to your home away from home.</h1>
+    <button class="dark-button">Book Now</button>
+  </div>
 </div>
 </template>
 
