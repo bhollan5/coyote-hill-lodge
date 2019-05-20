@@ -1,6 +1,45 @@
 <template>
 <div id="footer">
-  
+  <div id="left-footer-col">
+    <a href="#" id="short-logo">
+      <img src="@/assets/short-logo.png" >
+    </a>
+    <a href="#" id="airbnb">
+      <img src="@/assets/icons/airbnb.png">
+    </a>
+    <a href="#" id="facebook">
+      <img src="@/assets/icons/facebook.png">
+    </a>
+    <div id="footer-contact-info">
+      <h4>Contact</h4>
+      <hr>
+      <p>4801 County Rd.</p>
+      <p>Pagosa Springs, CO 81147-3387</p>
+      <p>TEL: 970.731.3387</p>
+      <p>EMAIL: </p>
+    </div>
+  </div>
+  <div id="right-footer-col">
+    <div id="footer-links">
+      <h4>Links</h4>
+      <hr>
+      <a href="#"><p>Home</p></a>
+      <a href="#"><p>Explore</p></a>
+      <a href="#"><p>Reviews</p></a>
+      <a href="#"><p>Contact</p></a>
+    </div>
+    <div id="footer-room-links">
+      <h4>Rooms</h4>
+      <hr>
+      <a href="#"><p>Main Level</p></a>
+      <a href="#"><p>Lower Level</p></a>
+      <a href="#"><p>Combined Suites</p></a>
+      <a href="#"><p>Shared Living Space</p></a>
+    </div>
+  </div>
+  <div id="copyright">
+    © Copyright 2019. All Rights Reserved. Website design by Startup Stirfry.
+  </div>
 </div>
 </template>
 
@@ -9,15 +48,71 @@
 
 #footer {
   background: $brown;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0px;
+  flex-flow: row wrap;
+  box-shadow: 0px 0px 15px rgba(0,0,0,.5);
 }
 
-h1 {
-  margin-top: 0px;
-  padding-top: 45vh;
+#left-footer-col {
+  display: grid;
+  min-width: 330px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr 1fr 3fr;
+  #short-logo {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    img {
+      width: 220px;
+    }
+  }
+  #airbnb {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  #facebook {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+  #footer-contact-info {
+    margin-top: 50px;
+  }
+}
+#right-footer-col {
+  min-width: 330px;
+}
+
+h4 {
   color: white;
-  text-shadow: $text-shadow;
-  font-size: 3vw;
-  max-width: 500px;
+  font-size: 28px;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+p {
+  color: white;
+  text-align: left;
+  margin: 10px 0px;
+}
+a {
+  p{
+    transition-duration: 1s;
+    &:hover {
+      margin-left: 5px;
+    }
+  }
+}
+#footer-room-links {
+  margin-top: 50px;
+}
+
+#copyright {
+  position: absolute;
+  color: white;
+  opacity: .5;
+  bottom: 5px;
 }
 
 </style>
