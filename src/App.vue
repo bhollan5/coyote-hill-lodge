@@ -2,18 +2,21 @@
   <div id="app">
     <main-header></main-header>
     <router-view/>
+    <main-footer></main-footer>
   </div>
 </template>
 
 <script>
 import MainHeader from '@/components/MainHeader';
+import MainFooter from '@/components/MainFooter';
 
 export default {
   data() {
     return {}
   },
   components: {
-    MainHeader
+    MainHeader,
+    MainFooter
   }
 }
 </script>
@@ -48,10 +51,10 @@ export default {
 
 .full-page {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   &.top-padding {
-    padding-top: 150px;
-    height: calc(100vh - 150px);
+    padding-top: 25vh;
+    height: 75vh;
   }
 }
 
@@ -69,5 +72,58 @@ export default {
 .dark-button:hover {
   background: rgba(0,0,0,.6);
   box-shadow: 0px 0px 10px rgba(255,255,255,.5);
+}
+
+.at-least-1200 {
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+.at-most-1200 {
+  @media only screen and (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.dark-container {
+  background: rgba(0,0,0,.5);
+  width: 40vw;
+  height: 80vh;
+  margin-left: 5vw;
+  margin-top:  10vh;
+  border: solid white 2px;
+  img {
+    width: 20%;
+    margin-top: 100px;
+  }
+  h2, h3 {
+    color: white;
+    font-size: 3vw;
+  }
+  hr {
+    width: 50%;
+  }
+  p {
+    color: white;
+    font-size: 1.5vw;
+    margin: 10px 10%;
+  }
+  @media only screen and (max-width: 800px) {
+    width: 90vw;
+    h2, h3 {
+      font-size: 8vw;
+    }
+    p {
+      font-size: 5vw;
+    }
+  }
+}
+.white-link  {
+  color: white;
+  text-decoration: underline;
+  font-size: 1.5vw;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
 }
 </style>

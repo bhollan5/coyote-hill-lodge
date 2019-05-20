@@ -1,7 +1,7 @@
 <template>
 <div class="full-page" id="landing-banner">
   <div>
-    <h1>Welcome to your home away from home.</h1>
+    <h1>Home away from home.</h1>
     <button class="dark-button">Book Now</button>
   </div>
 </div>
@@ -24,6 +24,11 @@ h1 {
   text-shadow: $text-shadow;
   font-size: 3vw;
   max-width: 500px;
+  @media only screen and (max-width: 1000px) {
+    padding-top: 50vh;
+    padding-bottom: 5vh;
+    font-size: 7vw;
+  }
 }
 
 </style>
