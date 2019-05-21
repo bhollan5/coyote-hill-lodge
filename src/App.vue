@@ -22,6 +22,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/globalVars.scss";
+
 
 @font-face {
   font-family: athelas;
@@ -125,5 +127,18 @@ export default {
   cursor: pointer;
   font-weight: bold;
   margin-top: 20px;
+}
+.header-block {
+  width: 100%;
+  height: 15vw;
+  max-height: 200px;
+  background: $brown;
+  box-shadow: $box-shadow;
+  @media only screen and (max-width: 1000px) {
+    height: 30vw;
+    max-height: 500px;
+
+    min-height: 300px;
+  }
 }
 </style>

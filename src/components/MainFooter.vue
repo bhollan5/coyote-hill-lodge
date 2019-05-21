@@ -99,6 +99,7 @@ p {
 a {
   p{
     transition-duration: 1s;
+    text-decoration: none;
     &:hover {
       margin-left: 5px;
     }
