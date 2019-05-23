@@ -152,7 +152,7 @@ h1 {
 }
 p {
   font-size: 20px;
-  margin-bottom: 50px;
+  margin: 50px 20px 50px;
 }
 a {
   color: $red;

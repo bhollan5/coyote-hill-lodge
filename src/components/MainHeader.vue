@@ -5,7 +5,7 @@
     <router-link tag="div" to="/explore-pagosa">Explore Pagosa</router-link>
     <router-link to="/"><img src="@/assets/long-logo.png"></router-link>
     <router-link tag="div" to="/reviews">Reviews</router-link>
-    <router-link tag="div" to="/">Contact</router-link>
+    <router-link tag="div" to="/contact">Contact</router-link>
   </div>
   <img src="@/assets/misc_image_assets/white-line-shadow.png" class="at-least-1200">
   <img src="@/assets/misc_image_assets/short-white-line-shadow.png" class="at-most-1200">
@@ -41,8 +41,10 @@
       // font-size: 3vw;
       padding-top: 10px;
     }
+    padding-left: 0px;
+    padding-right: 0px;
   }
-  div:hover {
+  div:hover:not(.router-link-active) {
     margin-top: -10px;
   }
   img {
@@ -54,5 +56,10 @@
       width: 80vw;
     }
   }
+}
+.router-link-active {
+  text-decoration: underline;
+  font-weight: bold;
+  
 }
 </style>

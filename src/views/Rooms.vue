@@ -125,14 +125,15 @@ h3 {
 h2 {
   font-size: 70px;
   margin: 0px;
-  padding: 0px 10%;
   font-weight: normal;
   text-align: left;
 }
 
 #title-lines {
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
+  padding: 0px 10%;
   p {
     margin: 0px;
     padding-bottom: 10px;
@@ -143,6 +144,14 @@ h2 {
 ul {
   list-style: none;
   display: flex;
+  flex-flow:  row  wrap;
+  text-align: left;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    li {
+      padding-top: 10px;
+    }
+  }
   margin: 0px;
   padding: 0px 10% 10px;
   width: 70%;
@@ -189,6 +198,8 @@ ul {
 }
 
 .floor-plan {
+  width: 100%;
+  max-width: 1200px;
   margin-bottom: 100px;
 }
 </style>

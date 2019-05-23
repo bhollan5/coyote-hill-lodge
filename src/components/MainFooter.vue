@@ -1,10 +1,10 @@
 <template>
 <div id="footer">
   <div id="left-footer-col">
-    <a href="#" id="short-logo">
+    <router-link to="/" id="short-logo">
       <img src="@/assets/short-logo.png" >
-    </a>
-    <a href="#" id="airbnb">
+    </router-link>
+    <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" id="airbnb" target="_blank">
       <img src="@/assets/icons/airbnb.png">
     </a>
     <a href="#" id="facebook">
@@ -23,18 +23,18 @@
     <div id="footer-links">
       <h4>Links</h4>
       <hr>
-      <a href="#"><p>Home</p></a>
-      <a href="#"><p>Explore</p></a>
-      <a href="#"><p>Reviews</p></a>
-      <a href="#"><p>Contact</p></a>
+      <router-link to="/"><p>Home</p></router-link>
+      <router-link to="/explore-pagosa"><p>Explore Pagosa</p></router-link>
+      <router-link to="/reviews"><p>Reviews</p></router-link>
+      <router-link to="/contact"><p>Contact</p></router-link>
     </div>
     <div id="footer-room-links">
       <h4>Rooms</h4>
       <hr>
-      <a href="#"><p>Main Level</p></a>
-      <a href="#"><p>Lower Level</p></a>
-      <a href="#"><p>Combined Suites</p></a>
-      <a href="#"><p>Shared Living Space</p></a>
+      <router-link to="/rooms"><p>Main Level</p></router-link>
+      <router-link to="/rooms"><p>Lower Level</p></router-link>
+      <router-link to="/rooms"><p>Combined Suites</p></router-link>
+      <router-link to="/rooms"><p>Shared Living Space</p></router-link>
     </div>
   </div>
   <div id="copyright">
@@ -97,6 +97,7 @@ p {
   margin: 10px 0px;
 }
 a {
+  text-decoration: none;
   p{
     transition-duration: 1s;
     text-decoration: none;

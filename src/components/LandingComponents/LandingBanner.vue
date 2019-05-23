@@ -2,7 +2,9 @@
 <div class="full-page" id="landing-banner">
   <div>
     <h1>Home away from home.</h1>
-    <button class="dark-button">Book Now</button>
+    <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" target="_blank">
+      <button class="dark-button">Book Now</button>
+    </a>
   </div>
 </div>
 </template>

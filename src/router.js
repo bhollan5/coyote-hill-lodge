@@ -23,13 +23,21 @@ export default new Router({
     },
     {
       path: '/explore-pagosa',
-      name: 'Explore-Pagosa',
+      name: 'explore-pagosa',
       component: () => import(/* webpackChunkName: "about" */ './views/ExplorePagosa.vue')
     },
     {
       path: '/reviews',
-      name: 'Reviews',
+      name: 'reviews',
       component: () => import(/* webpackChunkName: "about" */ './views/Reviews.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import(/* webpackChunkName: "about" */ './views/Contact.vue')
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

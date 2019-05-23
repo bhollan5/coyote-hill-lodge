@@ -5,7 +5,7 @@
     <h3>Plenty to Do</h3>
     <hr>
     <p>Situated on 200 acres just minutes from downtown Pagosa Springs, Colorado. You'll never run out of things to do.</p>
-    <router-link tag="p" to="/" class="white-link">Explore Pagosa Springs »</router-link>
+    <router-link tag="p" to="/explore-pagosa" class="white-link">Explore Pagosa Springs »</router-link>
   </div>
 </div>
 </template>
