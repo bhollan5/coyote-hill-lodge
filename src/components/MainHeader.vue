@@ -1,10 +1,10 @@
 <template>
 <div id="header">
   <div class="options">
-    <router-link tag="div" to="/">Rooms & Rates</router-link>
-    <router-link tag="div" to="/">Explore Pagosa</router-link>
-    <img src="@/assets/long-logo.png">
-    <router-link tag="div" to="/">Reviews</router-link>
+    <router-link tag="div" to="/rooms">Rooms & Rates</router-link>
+    <router-link tag="div" to="/explore-pagosa">Explore Pagosa</router-link>
+    <router-link to="/"><img src="@/assets/long-logo.png"></router-link>
+    <router-link tag="div" to="/reviews">Reviews</router-link>
     <router-link tag="div" to="/">Contact</router-link>
   </div>
   <img src="@/assets/misc_image_assets/white-line-shadow.png" class="at-least-1200">

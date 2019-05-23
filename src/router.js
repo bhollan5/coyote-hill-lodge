@@ -20,7 +20,16 @@ export default new Router({
       path: '/rooms/:roomOption',
       name: 'rooms',
       component: () => import(/* webpackChunkName: "about" */ './views/Rooms.vue')
-
+    },
+    {
+      path: '/explore-pagosa',
+      name: 'Explore-Pagosa',
+      component: () => import(/* webpackChunkName: "about" */ './views/ExplorePagosa.vue')
+    },
+    {
+      path: '/reviews',
+      name: 'Reviews',
+      component: () => import(/* webpackChunkName: "about" */ './views/Reviews.vue')
     }
   ]
 })

@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/globalVars.scss";
 
 #rooms {
@@ -168,7 +168,7 @@ ul {
   display: flex;
   align-items: center;
   font-size: 25px;
-  width: 400px;
+  width: 450px;
   padding: 40px 0px;
   img {
     width: 80px;
