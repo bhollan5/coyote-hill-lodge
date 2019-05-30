@@ -108,7 +108,11 @@ h3 {
   background: $white;
   height: calc(70vh - 20px);
   width: 20%;
-  min-width:  300px;
+  @media only screen and (max-width: 1370px) {
+    width: 90%;
+    height: calc(50vh - 20px);
+  }
+  // min-width:  300px;
   padding: 10px 15px;
   color: $brown !important;
   a {
@@ -141,6 +145,12 @@ h3 {
   justify-content: space-between;
   #room-image {
     width: 70%;
+    @media only screen and (max-width: 1370px) {
+      width: calc(90% + 30px);
+      margin-top: 20px;
+      height: 50vh;
+    }
+
     height: 70vh;
     background: url('../assets/room_pictures/main_floor.png');
     background-size: cover;
