@@ -6,17 +6,17 @@
         <h3>Rooms and Rates</h3>
         <router-link tag="a" to="/rooms/main">Main Level Suites</router-link>
         <router-link tag="a" to="/rooms/lower">Lower Level Suites</router-link>
-        <router-link tag="a" to="/rooms/combined">Combined Suites</router-link>
+        <!--<router-link tag="a" to="/rooms/combined">Combined Suites</router-link>-->
         <router-link tag="a" to="/rooms/shared">Shared Living Space</router-link>
         <img src="@/assets/misc_image_assets/brown-line.png">
       </div>
       <div id="room-image"></div>
     </div>
     <div id="title-lines">
-      <h2>Main Floor Suites</h2>
-      <p>$160 per night</p>
+      <h2>{{info.title}}</h2>
+      <p>{{info.price}}</p>
     </div>
-    <ul id="details">
+    <ul id="details" v-if="roomOpt != 'shared'">
       <li>up to 5 guests</li>
       <li>1 bedroom</li>
       <li>full kitchen</li>
@@ -24,11 +24,11 @@
       <li>1 bath, with jacuzzi</li>
     </ul>
     <div id="description">
-      <p>Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and  full living amenities. </p>
-      <p>All suites also come with:</p>
+      <p>{{info.description}}</p>
+      <p v-if="roomOpt != 'shared'">All suites also come with:</p>
     </div>
 
-    <div id="icon-features">
+    <div id="icon-features" v-if="roomOpt != 'shared'">
       <div class="icon-feature">
         <img src="@/assets/icons/laundry.png">
         <p>Full laundry access</p>
@@ -49,8 +49,11 @@
 
     <button class="dark-button">Book Now</button>
 
-    <h3 class="floor-plan-label">Main Level Floor Plan:</h3>
-    <img src="@/assets/floor_plans/main-level-floor-plan.png" class="floor-plan">
+    <h3 class="floor-plan-label" v-if="roomOpt == 'main'">Main Level Floor Plan:</h3>
+    <h3 class="floor-plan-label" v-if="roomOpt == 'lower'">Lower Level Floor Plan:</h3>
+
+    <img src="@/assets/floor_plans/main-level-floor-plan.png" class="floor-plan"
+    v-if="roomOpt != 'shared'">
 
   </div>
 </template>
@@ -63,8 +66,28 @@ export default {
     }
   },
   computed: {
-    info() {
+    roomOpt() {
       return this.$route.params.roomOption;
+    }, info() {
+      if (this.roomOpt == 'main') {
+        return {
+          title: 'Main Floor Suites',
+          description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
+          price: '$160 per night'
+        }
+      } else if (this.roomOpt == 'shared') {
+        return {
+          title: 'Shared Living Space',
+          description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
+          price: ''
+        }
+      } else  {
+        return {
+          title: 'Lower Floor Suites',
+          description: 'Have  beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and  full living amenities.',
+          price: '$110 per night'
+        }
+      }
     }
   }
 }
@@ -85,6 +108,7 @@ h3 {
   background: $white;
   height: calc(70vh - 20px);
   width: 20%;
+  min-width:  300px;
   padding: 10px 15px;
   color: $brown !important;
   a {
@@ -113,6 +137,7 @@ h3 {
   width: 80%;
   padding: 70px 10%;
   display:  flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   #room-image {
     width: 70%;
