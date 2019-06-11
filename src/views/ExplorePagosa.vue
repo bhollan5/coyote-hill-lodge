@@ -42,6 +42,16 @@ export default {
           ]
         },
         {
+          title: 'Paddleboarding',
+          image: 'slice10.jpg',
+          links: [
+            {
+              link: 'https://pagosaoutside.com/',
+              text: 'Pagosa Outside'
+            }
+          ]
+        },
+        {
           title: 'Horse Riding',
           image: 'slice2.png',
           links: [

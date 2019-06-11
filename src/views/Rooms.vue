@@ -10,7 +10,9 @@
         <router-link tag="a" to="/rooms/shared">Shared Living Space</router-link>
         <img src="@/assets/misc_image_assets/brown-line.png">
       </div>
-      <div id="room-image"></div>
+      <div id="room-image">
+        <img src="@/assets/room_pictures/main_floor.png">
+      </div>
     </div>
     <div id="title-lines">
       <h2>{{info.title}}</h2>
@@ -150,9 +152,14 @@ h3 {
       margin-top: 20px;
       height: 50vh;
     }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
 
     height: 70vh;
-    background: url('../assets/room_pictures/main_floor.png');
+    // background: url('../assets/room_pictures/main_floor.png');
     background-size: cover;
   }
 }
