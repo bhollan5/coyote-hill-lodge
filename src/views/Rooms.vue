@@ -10,20 +10,24 @@
         <router-link tag="a" to="/rooms/shared">Shared Living Space</router-link>
         <img src="@/assets/misc_image_assets/brown-line.png">
       </div>
-      <div id="room-image">
-        <img src="@/assets/room_pictures/main_floor.png">
-      </div>
+
+      <flickity ref="flickity" :options="flickityOptions" id="room-image">
+        <img v-for="image in info.images" 
+        :src="require(`@/assets/${image}`)" class="carousel-cell">
+      </flickity>
+
     </div>
     <div id="title-lines">
       <h2>{{info.title}}</h2>
       <p>{{info.price}}</p>
     </div>
     <ul id="details" v-if="roomOpt != 'shared'">
-      <li>up to 5 guests</li>
+      <li>up to 4 guests</li>
       <li>1 bedroom</li>
-      <li>full kitchen</li>
+      <li v-if="roomOpt == 'lower'">kitchenette</li>
+      <li v-if="roomOpt == 'main'">full kitchen</li>
       <li>living room with pull out couch</li>
-      <li>1 bath, with jacuzzi</li>
+      <li>jacuzzi bathtub</li>
     </ul>
     <div id="description">
       <p>{{info.description}}</p>
@@ -61,11 +65,23 @@
 </template>
 
 <script>
+import Flickity from 'vue-flickity';
+
 export default {
   data() {
     return {
-
+      flickityOptions: {
+        initialIndex: 3,
+        prevNextButtons: true,
+        pageDots: true,
+        wrapAround: true
+        
+        // any options from Flickity can be used
+      }
     }
+  },
+  components: {
+    Flickity,
   },
   computed: {
     roomOpt() {
@@ -75,19 +91,45 @@ export default {
         return {
           title: 'Main Floor Suites',
           description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
-          price: '$160 per night'
+          price: '$160 per night',
+          images: [
+            'main_level/main1.jpg',
+            'main_level/main2.jpg',
+            'main_level/main3.jpg',
+            'main_level/main4.jpg',
+            'main_level/main5.png',
+            'main_level/main6.png',
+            'main_level/main7.jpg',
+            'main_level/main8.jpg'
+          ]
         }
       } else if (this.roomOpt == 'shared') {
         return {
           title: 'Shared Living Space',
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
-          price: ''
+          price: '',
+          images: [
+            'misc_images/dining.png',
+            'misc_images/shared_space.jpg',
+            'misc_images/shared_space_upstairs.jpeg',
+            'exterior/exterior1.jpg',
+            'exterior/exterior2.jpg',
+            'exterior/exterior3.jpg',
+            'exterior/exterior4.jpg',
+            'exterior/exterior5.jpg',
+            'exterior/exterior6.jpg',
+          ]
         }
       } else  {
         return {
           title: 'Lower Floor Suites',
-          description: 'Have  beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and  full living amenities.',
-          price: '$110 per night'
+          description: 'This clean, rustic suite comes with  a bedroom, a living room with a pull out couch, and a jacuzzi bathtub. Enjoy a patio with Adirondack chairs around firepit outside, perfect for parties with view of the San Juan Mountains.',
+          price: '$110 per night',
+          images: [
+            'lower_level/lower1.jpeg',
+            'lower_level/lower2.jpeg',
+            'lower_level/lower3.jpg',
+          ]
         }
       }
     }
