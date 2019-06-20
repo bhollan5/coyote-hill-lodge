@@ -11,9 +11,13 @@
         <img src="@/assets/misc_image_assets/brown-line.png">
       </div>
 
-      <flickity ref="flickity" :options="flickityOptions" id="room-image">
-        <img v-for="image in info.images" 
-        :src="require(`@/assets/${image}`)" class="carousel-cell">
+      <flickity :options="flickityOptions" id="room-image" ref="room-images">
+        <img v-for="image in info.images" v-if="roomOpt == 'main'"
+        :src="require(`@/assets/main_level/${image}`)" class="carousel-cell">
+        <img v-for="image in info.images" v-else-if="roomOpt == 'shared'"
+        :src="require(`@/assets/shared/${image}`)" class="carousel-cell">
+        <img v-for="image in info.images" v-else
+        :src="require(`@/assets/lower_level/${image}`)" class="carousel-cell">
       </flickity>
 
     </div>
@@ -74,8 +78,8 @@ export default {
         initialIndex: 3,
         prevNextButtons: true,
         pageDots: true,
-        wrapAround: true
-        
+        wrapAround: true,
+        autoPlay: true
         // any options from Flickity can be used
       }
     }
@@ -93,14 +97,14 @@ export default {
           description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
           price: '$160 per night',
           images: [
-            'main_level/main1.jpg',
-            'main_level/main2.jpg',
-            'main_level/main3.jpg',
-            'main_level/main4.jpg',
-            'main_level/main5.png',
-            'main_level/main6.png',
-            'main_level/main7.jpg',
-            'main_level/main8.jpg'
+            'main1.jpg',
+            'main2.jpg',
+            'main3.jpg',
+            'main4.jpg',
+            'main5.png',
+            'main6.png',
+            'main7.jpg',
+            'main8.jpg'
           ]
         }
       } else if (this.roomOpt == 'shared') {
@@ -109,15 +113,15 @@ export default {
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
           price: '',
           images: [
-            'misc_images/dining.png',
-            'misc_images/shared_space.jpg',
-            'misc_images/shared_space_upstairs.jpeg',
-            'exterior/exterior1.jpg',
-            'exterior/exterior2.jpg',
-            'exterior/exterior3.jpg',
-            'exterior/exterior4.jpg',
-            'exterior/exterior5.jpg',
-            'exterior/exterior6.jpg',
+            'dining.png',
+            'shared_space.jpg',
+            'shared_space_upstairs.jpeg',
+            'exterior1.jpg',
+            'exterior2.jpg',
+            'exterior3.jpg',
+            'exterior4.jpg',
+            'exterior5.jpg',
+            'exterior6.jpg',
           ]
         }
       } else  {
@@ -126,13 +130,17 @@ export default {
           description: 'This clean, rustic suite comes with  a bedroom, a living room with a pull out couch, and a jacuzzi bathtub. Enjoy a patio with Adirondack chairs around firepit outside, perfect for parties with view of the San Juan Mountains.',
           price: '$110 per night',
           images: [
-            'lower_level/lower1.jpeg',
-            'lower_level/lower2.jpeg',
-            'lower_level/lower3.jpg',
+            'lower1.jpeg',
+            'lower2.jpeg',
+            'lower3.jpg',
           ]
         }
       }
-    }
+      }
+    }, watch: {
+        roomOpt() {
+          this.$refs['room-images'].$forceUpdate();
+        }
   }
 }
 </script>
