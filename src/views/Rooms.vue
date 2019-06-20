@@ -11,12 +11,12 @@
         <img src="@/assets/misc_image_assets/brown-line.png">
       </div>
 
-      <flickity :options="flickityOptions" id="room-image" ref="room-images">
-        <img v-for="image in info.images" v-if="roomOpt == 'main'"
+      <flickity :options="flickityOptions" class="room-image" ref="room-images" v-for="(section, key) in pageData" :key="key" v-if="key == roomOpt">
+        <img v-for="image in section.images" v-if="key == 'main'"
         :src="require(`@/assets/main_level/${image}`)" class="carousel-cell">
-        <img v-for="image in info.images" v-else-if="roomOpt == 'shared'"
+        <img v-for="image in section.images" v-else-if="key == 'shared'"
         :src="require(`@/assets/shared/${image}`)" class="carousel-cell">
-        <img v-for="image in info.images" v-else
+        <img v-for="image in section.images" v-else
         :src="require(`@/assets/lower_level/${image}`)" class="carousel-cell">
       </flickity>
 
@@ -81,18 +81,9 @@ export default {
         wrapAround: true,
         autoPlay: true
         // any options from Flickity can be used
-      }
-    }
-  },
-  components: {
-    Flickity,
-  },
-  computed: {
-    roomOpt() {
-      return this.$route.params.roomOption;
-    }, info() {
-      if (this.roomOpt == 'main') {
-        return {
+      },
+      pageData: {
+        main: {
           title: 'Main Floor Suites',
           description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
           price: '$160 per night',
@@ -106,9 +97,8 @@ export default {
             'main7.jpg',
             'main8.jpg'
           ]
-        }
-      } else if (this.roomOpt == 'shared') {
-        return {
+        },
+        shared:  {
           title: 'Shared Living Space',
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
           price: '',
@@ -123,9 +113,8 @@ export default {
             'exterior5.jpg',
             'exterior6.jpg',
           ]
-        }
-      } else  {
-        return {
+        },
+        lower: {
           title: 'Lower Floor Suites',
           description: 'This clean, rustic suite comes with  a bedroom, a living room with a pull out couch, and a jacuzzi bathtub. Enjoy a patio with Adirondack chairs around firepit outside, perfect for parties with view of the San Juan Mountains.',
           price: '$110 per night',
@@ -134,13 +123,27 @@ export default {
             'lower2.jpeg',
             'lower3.jpg',
           ]
-        }
+        },
       }
+    }
+  },
+  components: {
+    Flickity,
+  },
+  computed: {
+    roomOpt() {
+      return this.$route.params.roomOption;
+    }, info() {
+      if (this.pageData[this.roomOpt]) {
+        return this.pageData[this.roomOpt]
+      } else {
+        return 0;
       }
-    }, watch: {
-        roomOpt() {
-          this.$refs['room-images'].$forceUpdate();
-        }
+    }
+  }, watch: {
+    roomOpt() {
+      this.$refs['room-images'].$forceUpdate();
+    }
   }
 }
 </script>
@@ -195,7 +198,7 @@ h3 {
   display:  flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  #room-image {
+  .room-image {
     width: 70%;
     @media only screen and (max-width: 1370px) {
       width: calc(90% + 30px);
