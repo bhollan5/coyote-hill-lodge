@@ -7,7 +7,7 @@
     <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" id="airbnb" target="_blank">
       <img src="@/assets/icons/airbnb.png">
     </a>
-    <a href="#" id="facebook">
+    <a href="https://www.facebook.com/Coyote-Hill-Lodge-101071779983973/" id="facebook" target="_blank">
       <img src="@/assets/icons/facebook.png">
     </a>
     <div id="footer-contact-info">
