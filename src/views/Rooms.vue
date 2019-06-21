@@ -3,7 +3,7 @@
     <div class="header-block"></div>
     <div id="menu-and-picture-container">
       <div id="room-menu">
-        <h3>Rooms and Rates</h3>
+        <h3>Rooms and Rates!</h3>
         <router-link tag="a" to="/rooms/main">Main Level Suites</router-link>
         <router-link tag="a" to="/rooms/lower">Lower Level Suites</router-link>
         <!--<router-link tag="a" to="/rooms/combined">Combined Suites</router-link>-->
