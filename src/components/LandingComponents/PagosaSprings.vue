@@ -7,7 +7,7 @@
   </div>
   <div id="forest-image-container">
     <div id="forest-image-shadow"></div>
-    <img src="@/assets/misc_images/forest-hills.png"
+    <img src="@/assets/misc_images/forest-hills.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">

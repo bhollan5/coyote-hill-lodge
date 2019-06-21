@@ -13,7 +13,7 @@
 @import "@/globalVars.scss";
 
 #landing-banner {
-  background: url('../../assets/misc_images/main-landing-backdrop.png');
+  background: url('../../assets/misc_images/main-landing-backdrop.webp');
   background-size: cover;
   display: flex;
   justify-content: space-around;

@@ -21,7 +21,7 @@
 @import "@/globalVars.scss";
 
 #contact-backdrop {
-  background: url('../assets/misc_images/main-landing-backdrop.png');
+  background: url('../assets/misc_images/main-landing-backdrop.webp');
   background-size: cover;
   justify-content: space-around;
   padding-top: 50px;
