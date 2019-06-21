@@ -8,7 +8,7 @@
         <router-link tag="a" to="/rooms/lower">Lower Level Suites</router-link>
         <!--<router-link tag="a" to="/rooms/combined">Combined Suites</router-link>-->
         <router-link tag="a" to="/rooms/shared">Shared Living Space</router-link>
-        <img src="@/assets/misc_image_assets/brown-line.png">
+        <img src="@/assets/misc_image_assets/brown-line.png" class="desktop-only">
       </div>
 
       <flickity :options="flickityOptions" class="room-image" ref="room-images" v-for="(section, key) in pageData" :key="key" v-if="key == roomOpt">
@@ -77,7 +77,7 @@ export default {
       flickityOptions: {
         initialIndex: 3,
         prevNextButtons: true,
-        pageDots: true,
+        pageDots: false,
         wrapAround: true,
         autoPlay: true
         // any options from Flickity can be used
@@ -139,10 +139,6 @@ export default {
       } else {
         return 0;
       }
-    }
-  }, watch: {
-    roomOpt() {
-      this.$refs['room-images'].$forceUpdate();
     }
   }
 }
@@ -296,5 +292,10 @@ ul {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 100px;
+}
+.desktop-only {
+  @media only screen and (max-width: 1350px) {
+    display: none;
+  }
 }
 </style>
