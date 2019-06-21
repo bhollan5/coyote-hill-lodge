@@ -88,8 +88,8 @@ export default {
           description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
           price: '$160 per night',
           images: [
-            'main1.jpg',
-            'main2.jpg',
+            'main1.webp',
+            'main2.webp',
             'main3.jpg',
             'main4.jpg',
             'main5.png',
