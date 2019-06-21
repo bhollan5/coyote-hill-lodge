@@ -90,12 +90,12 @@ export default {
           images: [
             'main1.webp',
             'main2.webp',
-            'main3.jpg',
-            'main4.jpg',
-            'main5.png',
-            'main6.png',
-            'main7.jpg',
-            'main8.jpg'
+            'main3.webp',
+            'main4.webp',
+            'main5.webp',
+            'main6.webp',
+            'main7.webp',
+            'main8.webp'
           ]
         },
         shared:  {
@@ -103,15 +103,15 @@ export default {
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
           price: '',
           images: [
-            'dining.png',
-            'shared_space.jpg',
-            'shared_space_upstairs.jpeg',
-            'exterior1.jpg',
-            'exterior2.jpg',
-            'exterior3.jpg',
-            'exterior4.jpg',
-            'exterior5.jpg',
-            'exterior6.jpg',
+            'dining.webp',
+            'shared_space.webp',
+            'shared_space_upstairs.webp',
+            'exterior1.webp',
+            'exterior2.webp',
+            'exterior3.webp',
+            'exterior4.webp',
+            'exterior5.webp',
+            'exterior6.webp',
           ]
         },
         lower: {

@@ -2,7 +2,7 @@
 <div class="full-page top-padding" id="pagosa-springs">
   <div id="image-container">
     <div id="image-shadow"></div>
-    <img src="@/assets/shared/dining.png"
+    <img src="@/assets/shared/dining.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 300 + 'px'
     }">
