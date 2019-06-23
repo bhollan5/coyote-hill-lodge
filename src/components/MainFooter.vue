@@ -31,10 +31,9 @@
     <div id="footer-room-links">
       <h4>Rooms</h4>
       <hr>
-      <router-link to="/rooms"><p>Main Level</p></router-link>
-      <router-link to="/rooms"><p>Lower Level</p></router-link>
-      <router-link to="/rooms"><p>Combined Suites</p></router-link>
-      <router-link to="/rooms"><p>Shared Living Space</p></router-link>
+      <router-link to="/rooms/main"><p>Main Level</p></router-link>
+      <router-link to="/rooms/lower"><p>Lower Level</p></router-link>
+      <router-link to="/rooms/shared"><p>Shared Living Space</p></router-link>
     </div>
   </div>
   <div id="copyright">

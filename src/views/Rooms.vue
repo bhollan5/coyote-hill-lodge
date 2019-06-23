@@ -119,9 +119,9 @@ export default {
           description: 'This clean, rustic suite comes with  a bedroom, a living room with a pull out couch, and a jacuzzi bathtub. Enjoy a patio with Adirondack chairs around firepit outside, perfect for parties with view of the San Juan Mountains.',
           price: '$110 per night',
           images: [
-            'lower1.jpeg',
-            'lower2.jpeg',
-            'lower3.jpg',
+            'lower1.webp',
+            'lower2.webp',
+            'lower3.webp',
           ]
         },
       }
