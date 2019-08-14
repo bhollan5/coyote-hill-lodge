@@ -7,6 +7,14 @@
   </div>
   <div id="forest-image-container">
     <div id="forest-image-shadow"></div>
+    <!--<flickity :options="flickityOptions" class="room-image" ref="room-images" v-for="(section, key) in pageData" :key="key" v-if="key == roomOpt">
+        <img v-for="image in section.images" v-if="key == 'main'"
+        :src="require(`@/assets/main_level/${image}`)" class="carousel-cell">
+        <img v-for="image in section.images" v-else-if="key == 'shared'"
+        :src="require(`@/assets/shared/${image}`)" class="carousel-cell">
+        <img v-for="image in section.images" v-else
+        :src="require(`@/assets/lower_level/${image}`)" class="carousel-cell">
+      </flickity>-->
     <img src="@/assets/misc_images/forest-hills.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
@@ -16,6 +24,8 @@
 </template>
 
 <script>
+import Flickity from 'vue-flickity';
+
 export default {
   name: 'pagosa',
   data() {
@@ -24,6 +34,9 @@ export default {
       mouseX: 0,
       mouseY: 0
     }
+  },
+  components: {
+    Flickity,
   },
   mounted() {
     this.handleScroll();

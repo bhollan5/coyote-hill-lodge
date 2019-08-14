@@ -56,8 +56,8 @@ export default {
           image: 'slice2.png',
           links: [
             {
-              link: 'https://www.horsebackriding.com/',
-              text: 'Backcountry Outfitters'
+              link: 'https://allaroundtrailhorses.com/locations/diamond-hitch-stables/',
+              text: 'Dining Hitch'
             }
           ]
         },

@@ -13,7 +13,7 @@
     <h2>More Than Just a Room</h2>
     <hr>
     <p>In addition to private suites, guests enjoy access to shared living space.</p>
-    <router-link tag="div" to="/rooms" class="white-link">See Full Accomodations »</router-link>
+    <router-link tag="div" to="/rooms/shared" class="white-link">See Full Accommodations »</router-link>
 
   </div>
 </div>

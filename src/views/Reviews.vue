@@ -2,6 +2,9 @@
   <div class="full-page" id="reviews">
     <div class="header-block"></div>
     <h1>Reviews</h1>
+    <p><a href="https://www.tripadvisor.com/Hotel_Review-g33584-d3627055-Reviews-Coyote_Hill_Lodge-Pagosa_Springs_Colorado.html" target="_blank">
+      ★★★★★ - Trip Advisor
+    </a></p>
 
     <div id="review-card-container">
       <div class="review-card" v-for="card in cards">
@@ -23,6 +26,18 @@ export default {
         {
           review: "I've stayed at the Lodge multiple times over the years and could not have had a better experience. The rooms are amazing, tastefully decorated, family friendly and comfortable! You cannot find better views in the area too. It is close to town for shopping and entertainment. With the San Juan Forest right next door, my family had the best time exploring. A campfire to end the night is always a favorite for us. This is the place to stay in Pagosa Springs",
           author: 'Maureen Maxwell',
+        },
+        {
+          review: "This place is absolutely beautiful! The lodge runs up against the San Juan national forest with some absolutely amazing views. Johnathan was a great resourceand gave us some great tips on where to go and what to do. This place is definitely a diamond and I will be back as soon as I can!",
+          author: 'Michael',
+        },
+        {
+          review: "Amazing place! We enjoyed our stay and the room was beautiful. Great view, quiet area.. very comfortable accommodations! definitely will be back!",
+          author: 'Kam',
+        },
+        {
+          review: "The views from our bedroom were breathtaking; and it was lovely to cook our meals on the full kitchen. We would definitely stay again.",
+          author: 'Tana',
         },
         {
           review: "Great place with great views. Great amenities and staff. Location is private but still close enough to town and the mountains. Easy to get to from the local airport. Rooms are spacious.",
@@ -65,7 +80,11 @@ h1 {
   transform: translatex(-50%);
   padding: 10px;
   margin-top:  80px;
-  margin-bottom: 80px ;
+  margin-bottom: 0px ;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 
 #review-card-container  {
