@@ -5,7 +5,7 @@
     <h3>Horse Barn</h3>
     <hr>
     <p>Enjoy the full Western experience with our horse riding accomadations.</p>
-    <router-link tag="p" to="/rooms" class="white-link">Learn More »</router-link>
+    <!--<router-link tag="p" to="/rooms" class="white-link">Learn More »</router-link>-->
     <br><br>
     <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" target="_blank">
       <button class="dark-button">Book Now</button>
