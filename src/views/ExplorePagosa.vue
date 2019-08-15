@@ -57,7 +57,7 @@ export default {
           links: [
             {
               link: 'https://allaroundtrailhorses.com/locations/diamond-hitch-stables/',
-              text: 'Dining Hitch'
+              text: 'Diamond Hitch'
             }
           ]
         },
