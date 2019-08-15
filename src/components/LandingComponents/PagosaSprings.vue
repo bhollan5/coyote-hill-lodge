@@ -5,21 +5,24 @@
     <p>Coyote Hill is surrounded by national forest and gorgeous views of the San Juan Mountains.</p>
     <p>Get outside and enjoy the fresh mountain air. </p>
   </div>
-  <div id="forest-image-container">
-    <div id="forest-image-shadow"></div>
-    <!--<flickity :options="flickityOptions" class="room-image" ref="room-images" v-for="(section, key) in pageData" :key="key" v-if="key == roomOpt">
-        <img v-for="image in section.images" v-if="key == 'main'"
-        :src="require(`@/assets/main_level/${image}`)" class="carousel-cell">
-        <img v-for="image in section.images" v-else-if="key == 'shared'"
-        :src="require(`@/assets/shared/${image}`)" class="carousel-cell">
-        <img v-for="image in section.images" v-else
-        :src="require(`@/assets/lower_level/${image}`)" class="carousel-cell">
-      </flickity>-->
-    <img src="@/assets/misc_images/forest-hills.webp"
+  <flickity :options="flickityOptions" class="room-image" id="forest-image-container" ref="images">
+      <img src="@/assets/misc_images/forest-hills.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
-  </div>
+    <img src="@/assets/misc_images/barn-backdrop.png"
+    :style="{
+      'margin-top': (scrollPos / 10) - 150 + 'px'
+    }">
+    <img src="@/assets/misc_images/firepit.jpg"
+    :style="{
+      'margin-top': (scrollPos / 10) - 150 + 'px'
+    }">
+    <img src="@/assets/shared/exterior5.webp"
+    :style="{
+      'margin-top': (scrollPos / 10) - 150 + 'px'
+    }">
+  </flickity>
 </div>
 </template>
 
@@ -30,6 +33,14 @@ export default {
   name: 'pagosa',
   data() {
     return {
+      flickityOptions: {
+        prevNextButtons: true,
+        pageDots: true,
+        wrapAround: true,
+        autoPlay: true,
+        imagesLoaded: true
+        // any options from Flickity can be used
+      },
       scrollPos: 0,
       mouseX: 0,
       mouseY: 0
@@ -91,10 +102,11 @@ export default {
   height: 30vw;
   align-self: start;
   position: relative;
-  overflow: hidden;
   img {
-    width: 130%;
     margin-left: -15%;
+    object-fit: cover;
+    width: 130%;
+    // height: 100%;
   }
   #forest-image-shadow {
     position: absolute;

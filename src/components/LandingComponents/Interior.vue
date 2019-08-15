@@ -1,5 +1,5 @@
 <template>
-<div class="full-page top-padding" id="pagosa-springs">
+<div class="full-page top-padding" id="interior">
   <div id="image-container">
     <div id="image-shadow"></div>
     <img src="@/assets/shared/dining.webp"
@@ -44,7 +44,7 @@ export default {
 <style scoped lang="scss">
 @import "@/globalVars.scss";
 
-#pagosa-springs {
+#interior {
   background: $brown;
   display: flex;
   justify-content: space-around;
