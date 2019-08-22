@@ -2,7 +2,7 @@
 <div id="footer">
   <div id="left-footer-col">
     <router-link to="/" id="short-logo">
-      <img src="@/assets/short-logo.png" >
+      <img src="@/assets/short-logo.png" alt="Coyote Hill Logo">
     </router-link>
     <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" id="airbnb" target="_blank">
       <img src="@/assets/icons/airbnb.png">

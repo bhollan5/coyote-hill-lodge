@@ -1,12 +1,14 @@
 <template>
 <div class="full-page top-padding" id="pagosa-springs">
   <div id="text-container">
-    <h2>Pagosa Springs - Nature at its Best</h2>
-    <p>Coyote Hill is surrounded by national forest and gorgeous views of the San Juan Mountains.</p>
-    <p>Get outside and enjoy the fresh mountain air. </p>
+    <h2>Coyote Hill Lodge</h2>
+    <p>The lodge features 12,000 square feet of air conditioned and heated living space, including a  gourmet kitchen opening to a dining area, and a lounge with adobe style fireplace. </p>
+    <p>Coyote Hill Lodge is professionally designed and furnished, featuring floor-to-ceiling windows overlook the San Juan Mountains and National park.</p>
+    <p>A wide variety of wildlife have been in the area, including deer, elk, black bear, mountain lions, coyotes, prairie dogs, and other assorted species. </p>
+    <p style="font-size: 1vw;">No hunting on lodge property. Pets allowed on a case by case basis.</p>
   </div>
   <flickity :options="flickityOptions" class="room-image" id="forest-image-container" ref="images">
-      <img src="@/assets/misc_images/forest-hills.webp"
+    <img src="@/assets/misc_images/forest-hills.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">

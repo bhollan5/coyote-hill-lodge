@@ -3,11 +3,11 @@
     <div class="header-block"></div>
     <div id="menu-and-picture-container">
       <div id="room-menu">
-        <h3>Rooms and Rates!</h3>
+        <h3 style="font-size:22px;">Rooms and Rates</h3>
         <router-link tag="a" to="/rooms/main">Main Level Suites</router-link>
         <router-link tag="a" to="/rooms/lower">Lower Level Suites</router-link>
         <!--<router-link tag="a" to="/rooms/combined">Combined Suites</router-link>-->
-        <router-link tag="a" to="/rooms/shared">Shared Living Space</router-link>
+        <router-link tag="a" to="/rooms/shared">Shared Gathering Areas</router-link>
         <img src="@/assets/misc_image_assets/brown-line.png" class="desktop-only">
       </div>
 
@@ -99,7 +99,7 @@ export default {
           ]
         },
         shared:  {
-          title: 'Shared Living Space',
+          title: 'Shared Gathering Areas',
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
           price: '',
           images: [
@@ -173,6 +173,7 @@ h3 {
     display: block;
     margin-bottom: 5px;
     padding: 5px;
+    font-size: 18px;
     &.router-link-active {
       color: $white;
       background: $brown;
