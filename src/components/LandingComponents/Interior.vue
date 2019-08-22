@@ -12,7 +12,7 @@
     <img src="@/assets/icons/living.png">
     <h2>More Than Just a Room</h2>
     <hr>
-    <p>In addition to private suites, guests enjoy access to shared living space.</p>
+    <p>In addition to private suites, guests enjoy access to shared gathering areas.</p>
     <router-link tag="div" to="/rooms/shared" class="white-link">See Full Accommodations »</router-link>
 
   </div>

@@ -33,7 +33,7 @@
       <hr>
       <router-link to="/rooms/main"><p>Main Level</p></router-link>
       <router-link to="/rooms/lower"><p>Lower Level</p></router-link>
-      <router-link to="/rooms/shared"><p>Shared Living Space</p></router-link>
+      <router-link to="/rooms/shared"><p>Shared Gathering Areas</p></router-link>
     </div>
   </div>
   <div id="copyright">
