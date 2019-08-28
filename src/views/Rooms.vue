@@ -21,43 +21,47 @@
       </flickity>
 
     </div>
-    <div id="title-lines">
-      <h2>{{info.title}}</h2>
-      <p>{{info.price}}</p>
-    </div>
-    <ul id="details" v-if="roomOpt != 'shared'">
-      <li>up to 4 guests</li>
-      <li>1 bedroom</li>
-      <li v-if="roomOpt == 'lower'">kitchenette</li>
-      <li v-if="roomOpt == 'main'">full kitchen</li>
-      <li>living room with pull out couch</li>
-      <li>jacuzzi bathtub</li>
-    </ul>
-    <div id="description">
-      <p>{{info.description}}</p>
-      <p v-if="roomOpt != 'shared'">All suites also come with:</p>
+    <div id="room-info-container">
+      <img src="@/assets/lake-bg.png" class="bg-image">
+      <div id="title-lines">
+        <h2>{{info.title}}</h2>
+        <p>{{info.price}}</p>
+      </div>
+      <ul id="details" v-if="roomOpt != 'shared'">
+        <li>up to 4 guests</li>
+        <li>1 bedroom</li>
+        <li v-if="roomOpt == 'lower'">kitchenette</li>
+        <li v-if="roomOpt == 'main'">full kitchen</li>
+        <li>living room with pull out couch</li>
+        <li>jacuzzi bathtub</li>
+      </ul>
+      <div id="description">
+        <p>{{info.description}}</p>
+        <p v-if="roomOpt != 'shared'">All suites also come with:</p>
+      </div>
+
+      <div id="icon-features" v-if="roomOpt != 'shared'">
+        <div class="icon-feature">
+          <img src="@/assets/icons/laundry.png">
+          <p>Full laundry access</p>
+        </div>
+        <div class="icon-feature">
+          <img src="@/assets/icons/wifi.png">
+          <p>Free wifi</p>
+        </div>
+        <div class="icon-feature">
+          <img src="@/assets/icons/barn.png">
+          <p>Horse barn access</p>
+        </div>
+        <div class="icon-feature">
+          <img src="@/assets/icons/more.png">
+          <p>More shared amenities »</p>
+        </div>
+      </div>
+
     </div>
 
-    <div id="icon-features" v-if="roomOpt != 'shared'">
-      <div class="icon-feature">
-        <img src="@/assets/icons/laundry.png">
-        <p>Full laundry access</p>
-      </div>
-      <div class="icon-feature">
-        <img src="@/assets/icons/wifi.png">
-        <p>Free wifi</p>
-      </div>
-      <div class="icon-feature">
-        <img src="@/assets/icons/barn.png">
-        <p>Horse barn access</p>
-      </div>
-      <div class="icon-feature">
-        <img src="@/assets/icons/more.png">
-        <p>More shared amenities »</p>
-      </div>
-    </div>
-
-    <button class="dark-button">Book Now</button>
+    <button class="dark-button" style="position: relative;">Book Now</button>
 
     <h3 class="floor-plan-label" v-if="roomOpt == 'main'">Main Level Floor Plan:</h3>
     <h3 class="floor-plan-label" v-if="roomOpt == 'lower'">Lower Level Floor Plan:</h3>
@@ -223,6 +227,7 @@ h2 {
 
 #title-lines {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0px 10%;
@@ -249,8 +254,12 @@ ul {
   width: 70%;
   justify-content: space-between;
 }
+#details {
+  position: relative;
+}
 #description {
   text-align: left;
+  position: relative;
   p {
     padding: 50px 10% 0px;
     margin: 0px;
@@ -261,6 +270,7 @@ ul {
 #icon-features {
   display: flex;
   padding: 0px 10%;
+  position: relative;
   justify-content: space-around;
   flex-flow: row wrap;
 }
@@ -297,6 +307,21 @@ ul {
 .desktop-only {
   @media only screen and (max-width: 1350px) {
     display: none;
+  }
+}
+
+#room-info-container {
+  padding-top: 100px;
+  overflow-y: hidden;
+  position: relative;
+  padding-bottom: 50px;
+  .bg-image {
+    margin-top: -100px;
+    position: absolute;
+    left: 0px;
+    z-index: 0;
+    width: 100%;
+    filter: brightness(50%);
   }
 }
 </style>
