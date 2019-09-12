@@ -67,7 +67,9 @@
     <h3 class="floor-plan-label" v-if="roomOpt == 'lower'">Lower Level Floor Plan:</h3>
 
     <img src="@/assets/floor_plans/main-level-floor-plan.png" class="floor-plan"
-    v-if="roomOpt != 'shared'">
+    v-if="roomOpt == 'main'">
+    <img src="@/assets/floor_plans/lower-level-floor-plan.png" class="floor-plan"
+    v-if="roomOpt == 'lower'">
 
   </div>
 </template>
