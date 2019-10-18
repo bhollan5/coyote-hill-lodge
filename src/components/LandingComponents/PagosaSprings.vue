@@ -8,11 +8,11 @@
     <p style="font-size: 1vw;">No hunting on lodge property. Pets allowed on a case by case basis.</p>
   </div>
   <flickity :options="flickityOptions" class="room-image" id="forest-image-container" ref="images">
-    <img src="@/assets/misc_images/forest-hills.webp"
+    <img :src="require(`@/assets/misc_images/forest-hills.webp`)"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
-    <img src="@/assets/misc_images/barn-backdrop.png"
+    <img :src="require(`@/assets/misc_images/barn-backdrop.png`)"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
@@ -40,7 +40,7 @@ export default {
         pageDots: true,
         wrapAround: true,
         autoPlay: true,
-        imagesLoaded: true
+        imagesLoaded: false
         // any options from Flickity can be used
       },
       scrollPos: 0,
@@ -54,6 +54,7 @@ export default {
   mounted() {
     this.handleScroll();
     window.addEventListener('scroll', this.handleScroll);
+    setTimeout(() => this.$refs.images.reloadCells(), 300);
   },
   methods: {
     handleScroll() {
