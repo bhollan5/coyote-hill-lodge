@@ -4,7 +4,7 @@
     <img src="@/assets/icons/barn.png">
     <h3>Horse Barn</h3>
     <hr>
-    <p>Enjoy the full Western experience with our horse riding accomadations.</p>
+    <p>Enjoy the full Western experience with our horse riding accommodations.  Or, take our horses out for a ride for an additional cost.</p>
     <!--<router-link tag="p" to="/rooms" class="white-link">Learn More »</router-link>-->
     <br><br>
     <a href="https://www.airbnb.com/rooms/31787496?guests=1&adults=1&sl_alternate_dates_exclusion=true&source_impression_id=p3_1558643743_xlTMpaiCRqS0%2BYWn" target="_blank">

@@ -88,7 +88,7 @@ export default {
 }
 
 .dark-container {
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.7);
   width: 40vw;
   height: 80vh;
   margin-left: 5vw;
