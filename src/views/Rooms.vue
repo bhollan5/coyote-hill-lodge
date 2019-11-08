@@ -101,7 +101,8 @@ export default {
             'main5.webp',
             'main6.webp',
             'main7.webp',
-            'main8.webp'
+            'main8.webp',
+            'main9.webp',
           ]
         },
         shared:  {
@@ -109,6 +110,8 @@ export default {
           description: 'All suites have full access to several lounges with board games, video games, TVs, fireplaces, and more. Guests also enjoy access to full laundry amenities, a horse barn, and a patio with a fireplace for outdoor parties',
           price: '',
           images: [
+            'couch.webp',
+            'foosball.webp',
             'shared_space.webp',
             'shared_space2.webp',
             'shared_space_upstairs.webp',
@@ -117,6 +120,8 @@ export default {
             'exterior4.webp',
             'exterior5.webp',
             'exterior6.webp',
+            'campfire.webp',
+            'lounge.webp'
           ]
         },
         lower: {

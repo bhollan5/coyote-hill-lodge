@@ -24,7 +24,11 @@
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
-    <img src="@/assets/shared/exterior5.webp"
+    <img src="@/assets/wildlife/elk1.webp"
+    :style="{
+      'margin-top': (scrollPos / 10) - 150 + 'px'
+    }">
+    <img src="@/assets/shared/exterior6.webp"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
@@ -109,6 +113,7 @@ export default {
   height: 30vw;
   align-self: start;
   position: relative;
+  overflow: hidden;
   img {
     margin-left: -15%;
     object-fit: cover;
