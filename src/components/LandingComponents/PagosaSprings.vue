@@ -62,7 +62,7 @@ export default {
   mounted() {
     this.handleScroll();
     window.addEventListener('scroll', this.handleScroll);
-    setTimeout(() => this.$refs.images.reloadCells(), 300);
+    setTimeout(() => this.$refs.images.reloadCells(), 500);
   },
   methods: {
     handleScroll() {
