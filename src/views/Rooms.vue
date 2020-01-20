@@ -94,15 +94,15 @@ export default {
           description: 'Enjoy a balcony of the beautiful San Juan Mountains, a jacuzzi bathtub, and a clean, rustic living space with vaulted ceilings and full living amenities.',
           price: '$160 per night',
           images: [
-            'main1.webp',
-            'main2.webp',
-            'main3.webp',
-            'main4.webp',
-            'main5.webp',
-            'main6.webp',
-            'main7.webp',
-            'main8.webp',
-            'main9.webp',
+            'main1.webp.png',
+            'main2.webp.png',
+            'main3.webp.png',
+            'main4.webp.png',
+            'main5.webp.png',
+            'main6.webp.png',
+            'main7.webp.png',
+            'main8.webp.png',
+            'main9.webp.png',
           ]
         },
         shared:  {
@@ -112,16 +112,16 @@ export default {
           images: [
             'couch.webp',
             'foosball.webp',
-            'shared_space.webp',
-            'shared_space2.webp',
-            'shared_space_upstairs.webp',
-            'exterior1.webp',
-            'exterior2.webp',
-            'exterior4.webp',
-            'exterior5.webp',
-            'exterior6.webp',
-            'campfire.webp',
-            'lounge.webp'
+            'shared_space.webp.png',
+            'shared_space2.webp.png',
+            'shared_space_upstairs.webp.png',
+            'exterior1.webp.png',
+            'exterior2.webp.png',
+            'exterior4.webp.png',
+            'exterior5.webp.png',
+            'exterior6.webp.png',
+            'campfire.webp.png',
+            'lounge.webp.png'
           ]
         },
         lower: {
@@ -129,9 +129,9 @@ export default {
           description: 'This clean, rustic suite comes with  a bedroom, a living room with a pull out couch, and a jacuzzi bathtub. Enjoy a patio with Adirondack chairs around firepit outside, perfect for parties with view of the San Juan Mountains.',
           price: '$160 per night',
           images: [
-            'lower1.webp',
-            'lower2.webp',
-            'lower3.webp',
+            'lower1.webp.png',
+            'lower2.webp.png',
+            'lower3.webp.png',
           ]
         },
       }

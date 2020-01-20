@@ -2,7 +2,7 @@
 <div class="full-page top-padding" id="interior">
   <div id="image-container">
     <div id="image-shadow"></div>
-    <img src="@/assets/shared/dining.webp"
+    <img src="@/assets/shared/dining.webp.png"
     :style="{
       'margin-top': (scrollPos / 10) - 300 + 'px'
     }">

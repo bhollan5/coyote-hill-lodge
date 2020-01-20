@@ -14,7 +14,7 @@
 @import "@/globalVars.scss";
 
 #plenty-to-do {
-  background: url('../../assets/misc_images/plenty-to-do-backdrop.webp');
+  background: url('../../assets/misc_images/plenty-to-do-backdrop.png');
   background-size: cover;
   display: flex;
   // justify-content: space-around;

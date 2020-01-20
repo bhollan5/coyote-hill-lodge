@@ -8,15 +8,15 @@
     <p style="font-size: 1vw;">No hunting on lodge property. Pets allowed on a case by case basis.</p>
   </div>
   <flickity :options="flickityOptions" class="room-image" id="forest-image-container" ref="images">
-    <img src="@/assets/wildlife/elk1.webp"
+    <img src="@/assets/wildlife/elk1.png"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
-    <img :src="require(`@/assets/misc_images/from_above.webp`)"
+    <img :src="require(`@/assets/misc_images/from_above.png`)"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
-    <img :src="require(`@/assets/misc_images/forest-hills.webp`)"
+    <img :src="require(`@/assets/misc_images/forest-hills.png`)"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
@@ -29,7 +29,7 @@
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
     
-    <img src="@/assets/shared/exterior6.webp"
+    <img src="@/assets/shared/exterior6.webp.png"
     :style="{
       'margin-top': (scrollPos / 10) - 150 + 'px'
     }">
